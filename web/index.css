@@ -1,0 +1,16 @@
+#draggable{
+	background-color: grey;
+	height: 20px;
+	width: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#drop{
+	background-color: black;
+	height: 100px;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+}

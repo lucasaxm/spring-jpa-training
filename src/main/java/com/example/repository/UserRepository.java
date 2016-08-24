@@ -5,4 +5,8 @@ package com.example.repository;
 
 public interface UserRepository extends JpaRepository<User, Integer>{
 
+//    public List<User> findAllByName(String name);
+
+    User findByName(String name);
+
 }

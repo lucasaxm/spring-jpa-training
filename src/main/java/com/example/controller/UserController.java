@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class UserController {
 
@@ -29,5 +31,20 @@ public class UserController {
         return user.toString();
     }
 
-//    public List<User>
+    @RequestMapping("/show_all")
+    public List<User> findAll(){
+        return userRepository.findAll();
+    }
+
+//    @RequestMapping("/show/{name}")
+//    public List<User> findAllByName(@PathVariable String name){
+//        List<User> lu = userRepository.findAllByName(name);
+//        return lu;
+//    }
+
+    @RequestMapping("/show/{name}")
+    public User findByName(@PathVariable String name){
+        return userRepository.findByName(name);
+    }
+
 }

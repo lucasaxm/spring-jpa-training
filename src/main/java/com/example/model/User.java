@@ -1,6 +1,7 @@
 package com.example.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Data
+@NoArgsConstructor
 
 @Entity
 public class User {
@@ -20,8 +22,8 @@ public class User {
 
     private String password;
 
-    public User(String n, String p){
-        this.name=n;
-        this.password=p;
+    public User(final String n, final String p){
+        this.name = n;
+        this.password = p;
     }
 }
