@@ -10,7 +10,7 @@ $("#drop").droppable({
 			data: {dropped: true}
 		})
 		.done(function() {
-			console.log("success");
+			alert("success");
 		})
 		.fail(function() {
 			console.log("error");
